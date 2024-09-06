@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>For him</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Fell Fur You</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container" id="mainContent">
+        <h1>Are you a cat?</h1>
+        <button class="styled-button" id="yesButton">Yes</button>
+        <button class="styled-button" id="noButton">No</button>
+    </div>
+
+    <div class="container" id="afterYesContent" style="display: none;">
+        <h1 id="message">cause I fell FUR you <3</h1>
+        <div id="secondMessage" class="message">Love you, good luck!</div>
+        <img src="Cat.gif" alt="Cute Cat" id="catGif" />
+    </div>
+
+    <script>
+        const yesButton = document.getElementById('yesButton');
+        const noButton = document.getElementById('noButton');
+        const mainContent = document.getElementById('mainContent');
+        const afterYesContent = document.getElementById('afterYesContent');
+
+        noButton.onmouseover = function() {
+            noButton.style.position = 'absolute';
+            noButton.style.top = Math.random() * window.innerHeight + 'px';
+            noButton.style.left = Math.random() * window.innerWidth + 'px';
+        };
+
+        yesButton.onclick = function() {
+            mainContent.style.display = 'none';
+            afterYesContent.style.display = 'block';
+        };
+    </script>
+</body>
+</html>
